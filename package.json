@@ -12,9 +12,22 @@
   },
   "renovate": {
     "extends": [
-      "gitlab>html-validate/renovate-config"
+      "config:js-lib",
+      ":automergeBranch",
+      ":automergeMinor",
+      ":label(renovate)",
+      ":prNotPending",
+      ":rebaseStalePrs"
     ],
+    "semanticCommits": "enabled",
     "packageRules": [
+      {
+        "matchDepTypes": [
+          "dependencies",
+          "peerDependencies"
+        ],
+        "semanticCommitType": "fix"
+      },
       {
         "matchPackageNames": [
           "jest"
