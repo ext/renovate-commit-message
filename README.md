@@ -2,7 +2,21 @@
 
 Changing commit message for a package group does not seem to have any effect.
 
-As an attempt to configure this the repo sets both the deprecated `commitMessage` and the individual action, prefix, suffix, topic and extra parts.
+To reproduce this, this repo has a dependency to Jest 28 as well as some related packages all belongning to the group "jest monorepo".
+As Jest 29 is released I expect a pull request for the group to upgrade v28 -> v29.
+
+As an attempt to configure this the repo sets both the deprecated `commitMessage` and the individual action, prefix, suffix, topic and extra parts as part of a `packageRules`:
+
+```json
+{
+  "commitMessage": "commit message",
+  "commitMessageAction": "action",
+  "commitMessagePrefix": "prefix",
+  "commitMessageSuffix": "suffix",
+  "commitMessageTopic": "topic",
+  "commitMessageExtra": "extra"
+}
+```
 
 ## Expected behaviour
 
