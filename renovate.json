@@ -4,7 +4,7 @@
     {
       "matchPackageNames": ["jest"],
       "matchUpdateTypes": ["major"],
-      "groupName": "jest monorepo",
+      "groupName": "jest monorepo test",
       "commitMessage": "commit message",
       "commitMessageAction": "action",
       "commitMessagePrefix": "prefix",
