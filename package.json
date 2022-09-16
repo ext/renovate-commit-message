@@ -4,21 +4,13 @@
   "devDependencies": {
     "@types/jest": "28.1.8",
     "jest": "28.1.3",
-    "jest-diff": "28.1.3",
-    "jest-environment-jsdom": "28.1.3",
-    "jest-snapshot": "28.1.3",
     "ts-jest": "28.0.8",
     "typescript": "4.8.3"
   },
   "renovate": {
     "extends": [
-      "config:js-lib",
-      ":automergeBranch",
-      ":automergeMinor",
-      ":prNotPending",
-      ":rebaseStalePrs"
+      "config:js-lib"
     ],
-    "semanticCommits": "enabled",
     "packageRules": [
       {
         "matchPackageNames": [
@@ -28,8 +20,6 @@
           "major"
         ],
         "groupName": "jest monorepo",
-        "semanticCommits": "disabled",
-        "semanticCommitType": "feat",
         "commitMessage": "commit message",
         "commitMessageAction": "action",
         "commitMessagePrefix": "prefix",
